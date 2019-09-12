@@ -41,26 +41,33 @@ public class DynamicIntegerArray {
 	public void set(int v, int location) {
 		//A. set the variable at the location passed in to the method
 		//   to the new value v
+		arr[location]=v;
 	}
 	
 	//7. Complete the steps in the insert method
 	public void insert(int v, int location) {
 		//A. create and initialize a new int array to be one 
 		//   element longer than the member array
-		
+		int[] longerArr = new int[arr.length+1];
 		//B. Make a for loop that iterates through the new array
-
+		for(int i = 0;i<longerArr.length;i++) { 
 			//C. if i is less than location:
 		    //		set the element at i of the new array to the element at i of the member array
-			
+			if(i<location) {
+				longerArr[i] = arr[i];
+			}
 			//D. else if i is greater than location:
 		    //		set the element at i of the new array to the i - 1 element of the member array
-			
+			else if(i>location) {
+				longerArr[i]=arr[i-1];
+			}
 			//E. else, set the element at i of the new array to the value v
-		
-		
+			else {
+				longerArr[i]=v;
+			}
+		}
 		//F. set the member array equal to the new array
-	
+		arr=longerArr;
 	}
 	
 	//8. Run the tests again and check your progress
@@ -68,30 +75,38 @@ public class DynamicIntegerArray {
 	//9. Complete the steps in the remove method
 	public void remove(int location) {
 		//A. create a new array that is one element smaller than the member array
-		
+		int[] shorterArr = new int[arr.length-1];
 		//B. make a for loop to iterate through the member array
-		
+		for(int i = 0;i<arr.length;i++) {
 			//C. if i  is less than location
 			//		set the element at i of the new array to the element at i of the member array
-			
+			if(i<location) {
+				shorterArr[i]=arr[i];
+			}
 			//D. else if i  is greater than location
 			//		set the element at i - 1 of the new array to the element at i of the member array
-			
+			else if(i>location) {
+				shorterArr[i-1]=arr[i];
+			}
 			//E. else, continue;
-			
+			else {
+				continue;
+			}
+		}
 		//F. set the member array equal to the new array
+		arr=shorterArr;
 	}
-	
 	//10. Run the tests again the see if you are correct so far
 	
 	//11. Complete the size method so that it returns the length of the member array.
 	public int size() {
-		return 0;
+		return arr.length;
 	}
 	
 	//12. Complete the clear array so that it sets the member array 
 	//    equal to a new integer array of size 0
 	public void clear() {
+		arr= new int[0];
 	}
 	
 	//13. Run the test again to see if you are finished.
