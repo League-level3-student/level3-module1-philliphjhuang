@@ -16,7 +16,8 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
-		
+		lcc.initializeBeatles();
+		lcc.findLongestChip();
 	}
 	
 	private void initializeBeatles() {
@@ -30,10 +31,19 @@ public class _05_LongChipCompetition {
 		theBeatles.add(ringo);
 	}
 	
+	public void findLongestChip() {
+		for(int i = 0; i<theBeatles.size();i++) {
+			Beatle b = theBeatles.get(i);
+		}
+	}
 	public ArrayList<Beatle> getTheBand(){
+	
 		return theBeatles;
 	}
 }
+
+
+
 
 class Beatle {
 	private String name;

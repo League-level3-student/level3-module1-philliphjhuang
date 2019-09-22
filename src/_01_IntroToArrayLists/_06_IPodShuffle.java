@@ -20,7 +20,9 @@ public class _06_IPodShuffle{
 		 */
 		
 	}
-	
+	class Song {
+		
+	}
 	public static void main(String[] args) {
 		new _06_IPodShuffle();
 	}

@@ -37,7 +37,7 @@ public class _03_MurderOfCrows {
     		int deadCrows = i;
     		if(c.getStomachContents().contains("diamond")) {
     			System.out.println(name+" has the diamond.");
-    			System.out.println(deadCrows+" innocent crows have to be killed to find the diamond.");
+    			System.out.println(deadCrows+" innocent crow(s) have to be killed to find the diamond.");
     			break;
     		}
     	}
