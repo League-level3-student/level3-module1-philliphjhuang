@@ -26,7 +26,8 @@ public class _06_IPodShuffle implements MouseListener {
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
-		panel.setSize(600, 400);
+		panel.setSize(150,60);
+		frame.setSize(150,60);
 		panel.add(button);
 		button.setText("Surprise Me!");
 		button.addMouseListener(this);
@@ -39,7 +40,7 @@ public class _06_IPodShuffle implements MouseListener {
 		 */
 		
 		songs.add("RoadRollerDa.mp3");
-		songs.add("7pagesOfMuda.mp3");
+		songs.add("7PagesOfMuda.mp3");
 		songs.add("demo.mp3");
 		
 	}
