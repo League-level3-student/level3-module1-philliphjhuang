@@ -90,7 +90,7 @@ public class _02_LogSearch implements MouseListener{
 			String input4 = JOptionPane.showInputDialog("Enter the ID number you want to delete");
 			int ID = Integer.parseInt(input4);
 			String name = boi.get(ID);
-			boi.remove(key, value)
+			boi.remove(ID, name);
 		}
 	}
 	@Override
